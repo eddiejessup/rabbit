@@ -28,6 +28,16 @@ So assuming we're going with option (2), we have to decide the form of $D_{r, i}
 
 $D_{r, i} = D_{r} + D_{r, c} \Theta \, (v_c - v_i)$
 
+# Thoughts on approaching/leaving collisions
+
+If two particles are leaving one another, that isn't a collision, so it shouldn't increase the rotational diffusion. Let's look at what $v_i$ is in different cases:
+
+- Low-density limit, v_i = 1
+- A 'head-on' collision, conservative force opposes propulsive force, v_i < 1 (may be negative)
+- Two particles are close but moving away from each other. This means $F_cons is in the same direction as p, so v_i > 1.
+
+$v_i = \beta D (\mathbf{F}_i + F_p \mathbf{p}_i) \cdot \mathbf{p}_i$
+
 # Implementation
 
 can get atom properties via `double **mu = atom->mu`;
